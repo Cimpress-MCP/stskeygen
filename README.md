@@ -1,4 +1,4 @@
-# StsKeyGen [![Build Status](https://travis-ci.org/Cimpress-MCP/sqs-streams.svg?branch=master)](https://travis-ci.org/Cimpress-MCP/sqs-streams)
+# StsKeyGen [![Build Status](https://travis-ci.org/Cimpress-MCP/stskeygen.svg?branch=master)](https://travis-ci.org/Cimpress-MCP/sqs-streams)
 
 Generates an STS key and saves it to your AWS credentials file.
 
