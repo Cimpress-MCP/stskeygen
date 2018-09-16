@@ -10,4 +10,7 @@ deploy:
     branch: master
     node: '8'
     repo: Cimpress-MCP/stskeygen
-before_deploy: "node ./util/bump-version"
+before_deploy: 
+  - "npm install semver"
+  - "npm install bluebird"
+  - "node ./util/bump-version"
