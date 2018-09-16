@@ -4,7 +4,8 @@
   "description": "Generates STS access keys for AWS linked accounts and updates the AWS credentials file",
   "main": "src/index.js",
   "files": [
-    "src/"
+    "src/",
+    "util/"
   ],
   "bin": {
     "stskeygen": "./src/index.js"
