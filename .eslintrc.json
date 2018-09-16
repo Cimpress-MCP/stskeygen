@@ -1,0 +1,34 @@
+{
+  "extends": [
+      "airbnb-base",
+      "prettier"
+  ],
+  "rules": {
+      "curly": [
+          "error",
+          "all"
+      ],
+      "no-underscore-dangle": 0,
+      "no-unused-expressions": 0,
+      "chai-friendly/no-unused-expressions": 2,
+      "no-param-reassign": [
+          "error",
+          {
+              "props": false
+          }
+      ],
+      "prettier/prettier": [
+          "error",
+          {
+              "trailingComma": "none"
+          }
+      ]
+  },
+  "env": {
+      "mocha": true
+  },
+  "plugins": [
+      "chai-friendly",
+      "prettier"
+  ]
+}

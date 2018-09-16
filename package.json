@@ -1,0 +1,48 @@
+{
+  "name": "stskeygen",
+  "version": "1.0.0",
+  "description": "Generates STS access keys for AWS linked accounts and updates the AWS credentials file",
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "bin": {
+    "stskeygen": "./src/index.js"
+  },
+  "scripts": {
+    "eslint": "eslint --fix \"src/**/*.js\"",
+    "test": "nyc --reporter=text --reporter=html --reporter=lcov --check-coverage --lines 80 --functions 85 --branches 35 mocha \"./src/test/*.js\" --timeout=30000",
+    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "pretest": "npm run eslint-check && eslint ./src && depcheck . --ignores config",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cimpress-MCP/stskeygen.git"
+  },
+  "author": "Cimpress",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "config": "^2.0.1",
+    "ini": "^1.3.5",
+    "prompt": "^1.0.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.2",
+    "depcheck": "^0.6.9",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "mocha": "^4.1.0",
+    "nyc": "^12.0.2",
+    "prettier": "1.13.4",
+    "semver": "^5.5.1"
+  }
+}
