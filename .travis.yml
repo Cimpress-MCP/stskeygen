@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '8'
+deploy:
+  provider: npm
+  email: mcp_infrastructure@cimpress.com
+  api_key:
+    secure: ioubDamutCd0PFOO6WyKdiSJ6p15sUk5qhbY0BLzyV6CvXkRUDWITpzp9dP3eEIshbVC3KRFUCCQmSDLQZoEGeOorIQunj6NnkWYK4MIR0JwuyJW7kywMkKZe7V5Xso6Vn/FpUf+nN6SwJDjydG244XlrrLM57neSpEpPBWAwztS3HL06gsBv7EflxTEWow2H2dJ/LRQXSFAdHvUEH2p7z3GiVKz18ylFzUngX7hb3DvJShuOq5zI9/Pu9UNN8xfb4imPPLRTuiMgyL5mR4yi6yZaMPkBK1CYo4+PYS524FsMulqb8KroPYnTeR4eJpJdsYcYBj4OrmX+SvQgOl1JBPuxYjhCiQnwBXuJqohknsdTQ0l3iAf2XWMg5qKwP4AO+LeuxEVwc1hHtAS2ogjXg0RA+szeqs7fKL2r4wU6aCVgvkuHOhMuHsGkqHzdEK+8j/VsSLzQD0PedbqfQdEbfeMfttrLEDv0a2borLinRfjfWuGK8IqkWBn7HYNoFckcv7S0Dcls0+bE93mcyBpVc4RCYjFewdgcDjqb9AAv6px5LVKp8EJTJPy6U5044Juao5b19bVGNXwDSOTeMm2TCFL9jFrBGl8SEdXUVvl6LgpLkYEwK2c1xM+dKKR2sssstLr/b/qMP9KjKvG0BrB1xJzLBNcoXIo1aRHyC25Veo=
+  on:
+    branch: master
+    node: '8'
+    repo: Cimpress-MCP/stskeygen
+before_deploy: 
+  - "npm install semver"
+  - "npm install bluebird"
+  - "node ./util/bump-version"
